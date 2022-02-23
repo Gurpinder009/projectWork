@@ -14,8 +14,8 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/" autocomplete="off">
-        <input name="author_name" type="text" placeholder="name" />
+    <form action="/multipleAuthorNames.php" autocomplete="off">
+        <textarea style="resize:none;" name="author_name" type="text" placeholder="name"></textarea>
         <button>Submit</button>
     </form>
 </body>
