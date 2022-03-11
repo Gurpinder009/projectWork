@@ -1,0 +1,130 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Fredoka', sans-serif;
+}
+
+
+html,body{
+    height: 100%;
+    overflow: auto;
+}
+
+main{
+    display: grid;
+    align-items: center;
+    padding:2em 3em;
+    background-color: #e6e6e6;
+}
+
+.container{
+    height:100%;
+    display:grid;
+    border-radius:5px ;
+    overflow: hidden;
+    box-shadow: 4px 4px 15px rgba(0,0,0,0.2);
+    grid-template-columns:1fr 1fr ;
+}
+
+.right-container{
+    background-image: url("../images/books.jpeg");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+    background-color: rgb(245, 245, 245);
+}
+
+.left-container{
+    display:grid;
+    background-color: #2d3c47;
+    justify-items: center;
+    align-content: center;
+    padding:5.5em 0;
+}
+
+.inner-container{
+    /* border: 2px solid red; */
+    /* width:54%; */
+    display:grid;
+    row-gap: 0.5em;
+    width:calc( 14em + 5vw);
+}
+
+.form-heading{
+    /* border:2px solid green; */
+    color:#fff;
+    font-size:calc(1.5em + 0.8vw);
+    letter-spacing: 1.2px;
+    text-align: center; 
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-signup-link{
+    /* border:2px solid green; */
+    color:#fff;
+    font-size:1em;
+    font-weight: lighter;
+    display: flex;
+    margin-top: 0.2em;
+    padding:0 8px;
+    justify-content: space-between;
+
+}
+
+.form-signup-link span:nth-child(2){
+    text-decoration: underline;
+}
+
+
+.sign-in-form{
+    /* border:2px solid green; */
+        display:grid;
+        row-gap: 1.2em;
+        margin-top: 2.2em;
+}
+
+.field-label{
+    color:#fff;
+    letter-spacing: 1px;
+    font-weight: lighter;
+}
+
+.input-field{
+    display:block;
+    height:2.6em;
+    width:100%;
+    margin-top: 0.2em; 
+    padding:0 0.7em;
+    font-size: 1.05em;
+    border-radius: 6px;
+    border:none;
+    outline: none;
+}
+
+.btn{
+    height:2.7em;
+    font-size: 1em;
+    margin-bottom:0.2em ;
+    letter-spacing: 0.6px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-weight:bolder;
+}
+
+.sign-in-button{
+    color:#fff;
+    margin-top: 1em;
+    letter-spacing: 1px;
+    background-color: rgb(57, 188, 248);
+}
+
+.sign-in-with-google{
+    background: #7a7a7a;
+    color:#fff;
+}
+
+@media screen and (max-width:800px){
+    
+}
