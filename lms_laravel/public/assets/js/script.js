@@ -7,3 +7,9 @@ function menu(){
     }
   
 }
+
+function toggle_password_visibility(){
+    let x = document.getElementById('password');
+
+    (x.getAttribute("type") === "password")?x.setAttribute("type","text"):x.setAttribute("type","password");
+}

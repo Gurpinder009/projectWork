@@ -6,15 +6,12 @@
 }
 
 :root {
-  --width-drawer: 15em;
+  --width-drawer: 0em;
 }
 
-
-html::-webkit-scrollbar-track{
+html::-webkit-scrollbar-track {
   background-color: green;
 }
-
-
 
 body {
   display: grid;
@@ -23,6 +20,7 @@ body {
   grid-template-rows: 100vh;
   overflow: hidden;
   position: relative;
+  background-color: rgb(233, 233, 233);
 }
 
 #navbar {
@@ -47,7 +45,7 @@ body {
 
 #menu {
   cursor: pointer;
-  display: none;
+  /* display: none; */
 }
 
 #drawer {
@@ -77,15 +75,13 @@ body {
 
 .main {
   min-height: 90vh;
-
 }
 
 main {
-
   overflow-y: scroll;
 }
 
-main::-webkit-scrollbar-thumb{
+main::-webkit-scrollbar-thumb {
   background-color: aqua;
 }
 
@@ -102,7 +98,6 @@ footer {
   align-content: center;
   background-color: rgb(238, 238, 238);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
-  
 }
 
 .icon-container {
@@ -117,8 +112,6 @@ i {
   border: 2px solid red;
 }
 
-
-
 @media screen and (max-width: 750px) {
   :root {
     --width-drawer: 0em;
@@ -129,135 +122,214 @@ i {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-table{
+table {
   border-collapse: collapse;
   table-layout: fixed;
   border-radius: 5px;
   overflow: hidden;
-  box-shadow: 4px 4px 10px rgb(0,0,0,0.4);
+  box-shadow: 4px 4px 10px rgb(0, 0, 0, 0.4);
 }
-thead{
+thead {
   background-color: rgb(194, 194, 194);
 }
 
-th{
+th {
   text-transform: capitalize;
-  padding:0.8em 1.2em;
+  padding: 0.8em 1.2em;
 }
 
-tr:nth-child(even){
+tr:nth-child(even) {
   background-color: rgb(231, 231, 231);
 }
 
-td{
-  padding:0.5em 1em;
+td {
+  padding: 0.5em 1em;
   /* border: 2px solid red; */
 }
 
-
-@media screen and (max-width:700px){
-  .main{
-    padding:0;
+@media screen and (max-width: 700px) {
+  .main {
+    padding: 0;
     margin: 0;
   }
-  
-table{
-  display:block;
-  padding:1em;
- width:100%;
- box-shadow: none;
-  border: 10px solid #fff;
-}
-thead{
-  display:none;
+
+  table {
+    display: block;
+    padding: 1em;
+    width: 100%;
+    box-shadow: none;
+    border: 10px solid #fff;
+  }
+  thead {
+    display: none;
+  }
+
+  tbody {
+    display: block;
+  }
+
+  tr {
+    display: block;
+    border-radius: 10px;
+    width: 100%;
+    overflow: hidden;
+    margin: 1.5em 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  }
+
+  td {
+    display: flex;
+    /* border:2px solid red; */
+    padding: 0.8em 1.4em;
+    background-color: #fff;
+    justify-content: space-between;
+  }
+
+  td:nth-child(odd) {
+    background-color: aliceblue;
+  }
+
+  td::before {
+    content: attr(data-label);
+    text-align: left;
+    text-transform: capitalize;
+    font-weight: bold;
+  }
 }
 
-tbody{
-  display:block;
+.form-container {
+  display: grid;
+  background-image: url("https://5.imimg.com/data5/CX/YM/AJ/SELLER-50831584/library-management-software-500x500.png");
+  background-repeat: no-repeat;
+  background-position: 95%;
+  margin: 2em auto;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  background-color: rgb(248, 248, 248);
+  border-radius: 5px;
+  width: calc(50em + 13vw);
+  justify-self: center;
 }
 
-
-tr{
-  display: block;
-  border-radius: 10px; 
-  width:100%; 
-  overflow: hidden;
-  margin: 1.5em 0;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
-}
-
-td{
-  display:flex;
-  /* border:2px solid red; */
-  padding:0.8em 1.4em;
+.form {
+ 
+  width: 24em;
+  box-shadow: 0.5px 0.5px 8px rgba(0, 0, 0, 0.1);
+  display: grid;
+  position: relative;
+  left: 3em;
+  border-radius: 4px;
   background-color: #fff;
-  justify-content: space-between;
-  
+  margin: 3em 0;
+  padding: 3.2em 3em;
+  row-gap: 1.4em;
 }
 
-td:nth-child(odd){
-  background-color: aliceblue;
+.signup-link {
+  display: flex;
+  justify-content: center;
+}
+.signup-link span {
+  letter-spacing: 0.5px;
 }
 
-td::before{
-  content: attr(data-label);
-  text-align: left;
+.signup-link a {
+  color: #505050;
+  text-decoration: underline;
+  margin-left: 0.5em;
+}
+
+.form-heading {
+  font-family: "Fredoka", sans-serif;
+  font-weight: bolder;
+  font-size: 2.1em;
+  color: #454554;
+  letter-spacing: 1px;
+  margin-bottom: 0.1em;
+}
+
+.field-label {
+  letter-spacing: 0.7px;
+  cursor: text;
+}
+
+.input-field {
+  width: 100%;
+  height: 2.9em;
+  color: #252525;
+  border-radius: 5px;
+  font-size: 1.1em;
+  outline: none;
+  padding: 0 0.8em;
+  margin-top: 4px;
+  border: 1.5px solid #252525;
+}
+
+.btn {
+  height: 3em;
+  font-family: "Fredoka", sans-serif;
+  letter-spacing: 1.5px;
+  width: 100%;
+  border: none;
+  border-radius: 3px;
+  color: white;
   text-transform: capitalize;
-  font-weight: bold;
-
+  font-weight: bolder;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: rgb(185, 185, 185);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+.btn:active {
+  box-shadow: none;
+}
+small {
+  position: absolute;
+  display: block;
+  color: rgb(228, 55, 55);
+}
+
+#remember_user {
+  margin-right: 0.4em;
+}
+
+#show-password-toggler {
+  position: absolute;
+  right: 16.3%;
+  bottom: 50.5%;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 940px) {
+  .form {
+    /* background-color: black; */
+    left: 0;
+  }
+
+  .form-container {
+    background-image: none;
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+    padding: 0;
+    background-color: inherit;
+    box-shadow: none;
+  }
+
+  .form-heading {
+    letter-spacing: 1.5px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .form {
+    padding-top: 5em;
+    padding-bottom: 5em;
+    width: 94vw;
+  }
+
+  #show-password-toggler {
+    position: absolute;
+    cursor: pointer;
+  }
 }
