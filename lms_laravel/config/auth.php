@@ -44,6 +44,10 @@ return [
         'user'=>[
             'driver'=>'session',
             'provider'=>'userCustom'
+        ],
+        "admin"=>[
+            "driver"=>"session",
+            'provider'=>"admin"
         ]
     ],
 
@@ -79,6 +83,10 @@ return [
             'driver' => 'database',
             'table' => 'users',
         ],
+        "admin"=>[
+            'driver'=>'database',
+            'table'=>'users'
+        ]
     ],
 
     /*
